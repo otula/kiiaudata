@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="ca_frontend-uimahalli" basedir=".">
+
+	<property file="build.properties"/>
+
+	<!-- import the main ca frontend build file -->
+	<import file="${cafrontend.sourcedir}/build-core.xml"/>
+	
+	<property name="distUimahalliServiceJarName" value="${uimahalli.project.name}${versionString}.jar"/> <!-- use project name for the jar-file -->
+	
+    <target name="prepare-uimahalli-build" description="Make sure that the required directories exist for the building process" 
+		extensionOf="ca_frontend-core.ready-to-build" depends="prepare">
+        <echo message="Creating additional directories to ${app.name}'s war directory ..."/>
+        <mkdir dir="${build}"/>
+		<mkdir dir="${build}/classes-uimahalli"/>
+    </target>
+	
+	<target name="build-uimahalli" description="Builds service files" 
+		extensionOf="ca_frontend-core.build" depends="prepare-uimahalli-build, build-core">
+		<!-- Build service files (except the service files which are already included in the core build, 
+			 knowledge to this is an undocumented base feature) -->
+		<echo message="Building and Jarring '${uimahalli.project.name}' service files..."/>
+		<javac srcdir="src"
+			destdir="${build}/classes-uimahalli"
+			classpath="${dist}/${distCoreJarName}"
+			classpathref="classpath">
+			<include name="**/*.java"/>
+        </javac>
+		<jar jarfile="${dist}/${distUimahalliServiceJarName}">
+    		<fileset dir="${build}/classes-uimahalli" includes="**"/>
+        </jar>
+		
+		<!--Copy all static web files-->
+        <copy todir="${build}/${app.name}" preservelastmodified="true">
+            <fileset dir="web">
+                <include name="**/*"/>
+                <exclude name="**/.*"/>
+            </fileset>
+        </copy>
+    </target>
+	
+	<target name="package-uimahalli-files" description="Include service files to the package" 
+		extensionOf="ca_frontend-core.ready-to-package" depends="build">
+		<copy todir="${build}/${app.name}/WEB-INF/lib">
+			<fileset dir="${dist}">
+				<include name="${distUimahalliServiceJarName}"/>
+			</fileset>
+		</copy>
+	</target>
+
+</project>

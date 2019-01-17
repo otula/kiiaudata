@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MittausClient</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_graph">Graph</string>
+    <string name="title_dialog_error">Error</string>
+    <string name="title_dialog_confirmation">Please Confirm</string>
+    <string name="title_dialog_selection">Select</string>
+    
+    <!-- common -->
+    <string name="error_invalid_settings">Invalid username, password or serviceUri.</string>
+    <string name="input_default_hint">Type value here</string>
+    <string name="button_yes">Yes</string>
+    <string name="button_no">No</string>
+    <string name="button_ok">OK</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="not_available">N/A</string>
+    <string name="per_day">day</string>
+    
+    <!-- error codes -->
+    <string name="error_unknown_error">Unknown error code</string>
+    <string name="error_service_unavailable">Service unavailable</string>
+    <string name="error_service_failure">Service failure</string>
+    <string name="error_ok">OK</string>
+    <string name="error_application_error">Application error</string>
+    <string name="error_bad_settings">Bad settings</string>
+    <string name="error_credentials_error">Bad credentials</string>
+    
+    <!-- forms -->
+    <string name="form_help">Press and hold a value title to show history.</string>
+    <string name="form_button_send_values">Save values</string>
+    <string name="form_notification_values_saved">Values Saved.</string> 
+    <string name="form_notification_values_not_modified">No values were changed.</string>
+    <string name="form_warning_unsaved_changes">Values have not been saved. Do you really want to change the meter?</string>
+    <string name="form_error_invalid_values">Bad values entered.</string> 
+    <string name="form_error_failed_to_start_service">Failed to start background service.</string> 
+    <string name="form_error_nfc_failure">NFC Error.</string>
+    <string name="form_empty_list">Tap the tag</string>
+    <string name="form_label_previous_value">Previous value</string>
+    <string name="form_label_difference_previous_value">Difference between previous value</string>
+    <string name="form_label_average">Daily average</string>
+    <string name="form_label_median">Median</string>
+    <string name="form_label_invalid_value">Invalid value</string>
+    <string name="form_label_greater_than_threshold_value">Value greater than threshold</string>
+    <string name="form_label_lower_than_threshold_value">Value lower than threshold</string>
+    <string name="form_title_previous">Previous</string>
+    <string name="form_warning_abort_input">Abort value input?</string>
+    <string name="form_warning_invalid_values">Invalid values given. Continue anyway?</string>
+    
+    <!-- graphs -->
+    <string name="graph_warning_no_gauges">Meter is empty.</string> 
+    <string name="graph_notification_no_values">No values.</string> 
+    <string name="graph_label_select_meter">Select Meter</string> 
+    <string name="graph_warning_no_meters">No meters.</string> 
+    <string name="graph_label_no_meter_selected">No meter selected.</string> 
+    <string name="graph_label_x_axis">Date</string> 
+    <string name="graph_label_min_limit">minimum limit</string> 
+    <string name="graph_label_max_limit">maximum limit</string> 
+    <string name="graph_help">Tap a point to get point details. Re-center the graph by long tapping.</string> 
+    
+    <!-- menu item names -->
+    <string name="menu_item_settings">settings</string>
+    <string name="menu_item_form">form</string>
+    <string name="menu_item_graph">graph</string>
+    <string name="menu_item_change_tag">NFC</string> <!-- for manually changing NFC tag -->
+    
+    <!-- settings activity -->
+    <string name="settings_label_allow_invalid_values">Allow invalid values</string>
+    <string name="settings_label_username">Username</string>
+    <string name="settings_label_password">Password</string>
+    <string name="settings_button_sync">Synchronize</string>
+    <string name="settings_label_point">Point ID</string>
+    <string name="settings_label_service_uri">Service URI</string>
+    <string name="settings_hint_service_uri">Server address</string>
+    <string name="settings_label_replace_data">Replace history data</string>
+    <string name="settings_title_loading">Please wait</string>
+    <string name="settings_notification_checking_credentials">Checking credentials.</string>
+    <string name="settings_notification_loading_meters">Loading meters.</string>
+    <string name="settings_notification_sync">Connect to server for synchronization?</string>
+    <string name="settings_notification_meters_updated">Meters updated.</string>
+    <string name="settings_warning_no_meters">No meters returned by the server.</string>
+    <string name="settings_help">When done, press back. The settings will be automatically saved.</string>
+    
+    <!-- value dialog -->
+    <string name="valuedialog_label_index">Value index</string>
+    <string name="valuedialog_label_updated">Updated</string>
+    <string name="valuedialog_text_required">This is a required value.</string>
+    <string name="valuedialog_text_not_required">This is an optional value.</string>
+    <string name="valuedialog_text_no_limits">-</string>
+    <string name="valuedialog_label_value">Value</string>
+    <string name="valuedialog_label_limits">Limits</string>
+    <string name="valuedialog_notification_no_previous_value">No previous value.</string>
+    <string name="valuedialog_notification_no_next_value">No next value.</string>
+    <string name="valuedialog_help">Swipe left or right to view previous and next values.</string>
+
+</resources>

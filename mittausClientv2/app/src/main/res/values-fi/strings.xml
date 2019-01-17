@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MittausClient</string>
+    <string name="title_activity_settings">Asetukset</string>
+    <string name="title_activity_graph">Kaavio</string>
+    <string name="title_dialog_error">Virhe</string>
+    <string name="title_dialog_confirmation">Vahvistaminen</string>
+    <string name="title_dialog_selection">Valitse</string>
+    
+    <!-- common -->
+    <string name="error_invalid_settings">Virheellinen käyttäjätunnus, salasana tai palvelimen osoite.</string>
+    <string name="input_default_hint">Anna arvo</string>
+    <string name="button_yes">Kyllä</string>
+    <string name="button_no">Ei</string>
+    <string name="button_ok">OK</string>
+    <string name="button_cancel">Peruuta</string>
+    <string name="not_available">N/A</string>
+    <string name="per_day">päivä</string>
+    
+    <!-- error codes -->
+    <string name="error_unknown_error">Tuntematon virhekoodi</string>
+    <string name="error_service_unavailable">Yhteysvirhe</string>
+    <string name="error_service_failure">Palveluvirhe</string>
+    <string name="error_ok">OK</string>
+    <string name="error_application_error">Sovellusvirhe</string>
+    <string name="error_bad_settings">Virheelliset asetukset</string>
+    <string name="error_credentials_error">Kirjautumisvirhe</string>
+    
+    <!-- forms -->
+    <string name="form_help">Paina arvokentän nimeä pitkään nähdäksesi historiatiedot.</string>
+    <string name="form_button_send_values">Tallenna arvot</string>
+    <string name="form_notification_values_saved">Arvot tallennettu.</string> 
+    <string name="form_notification_values_not_modified">Ei muutoksia.</string>
+    <string name="form_warning_unsaved_changes">Arvoja ei ole tallennettu. Haluatko varmasti vaihtaa mittaria?</string>
+    <string name="form_error_invalid_values">Virheellisiä arvoja.</string> 
+    <string name="form_error_failed_to_start_service">Taustapalvelun käynnistäminen epäonnistui.</string> 
+    <string name="form_error_nfc_failure">NFC virhe.</string>
+    <string name="form_empty_list">Täppää tägiä</string>
+    <string name="form_label_previous_value">Edellinen arvo</string>
+    <string name="form_label_difference_previous_value">Ero edelliseen arvoon</string>
+    <string name="form_label_average">Päivittäinen keskiarvo</string>
+    <string name="form_label_median">Mediaani</string>
+    <string name="form_label_invalid_value">Virheellinen arvo</string>
+    <string name="form_label_greater_than_threshold_value">Arvo on suurempi kuin raja-arvo</string>
+    <string name="form_label_lower_than_threshold_value">Arvo on pienempi kuin raja-arvo</string>
+    <string name="form_title_previous">Edellinen</string>
+    <string name="form_warning_abort_input">Peruuta arvojen syöttö?</string>
+    <string name="form_warning_invalid_values">Virheellisiä arvoja syötetty. Tallennetaanko virheelliset arvot?</string>
+    
+    <!-- graphs --> 
+    <string name="graph_warning_no_gauges">Mittari on tyhjä.</string> 
+    <string name="graph_notification_no_values">Ei arvoja.</string> 
+    <string name="graph_label_select_meter">Valitse mittari</string> 
+    <string name="graph_warning_no_meters">Ei mittareita.</string> 
+    <string name="graph_label_no_meter_selected">Mittaria ei ole valittuna.</string> 
+    <string name="graph_label_x_axis">Päivämäärä</string> 
+    <string name="graph_label_min_limit">minimiarvo</string> 
+    <string name="graph_label_max_limit">maksimiarvo</string> 
+    <string name="graph_help">Näpäytä pistettä nähdäksesi pisteen tiedot. Keskitä kaavio painamalla kaaviota pitkään.</string> 
+    
+    <!-- menu item names -->
+    <string name="menu_item_settings">asetukset</string>
+    <string name="menu_item_form">lomake</string>
+    <string name="menu_item_graph">kaavio</string>
+    <string name="menu_item_change_tag">NFC</string> <!-- for manually changing NFC tag -->
+    
+    <!-- settings activity -->
+    <string name="settings_label_allow_invalid_values">Salli virheelliset arvot</string>
+    <string name="settings_label_username">Käyttäjätunnus</string>
+    <string name="settings_label_password">Salasana</string>
+    <string name="settings_button_sync">Synkronisoi</string>
+    <string name="settings_label_point">Paikkatunniste</string>
+    <string name="settings_label_service_uri">URI</string>
+    <string name="settings_hint_service_uri">Palvelimen osoite</string>
+    <string name="settings_label_replace_data">Korvaa historiatiedot</string>
+    <string name="settings_title_loading">Ladataan</string>
+    <string name="settings_notification_checking_credentials">Tarkistetaan käyttäjätietoja.</string>
+    <string name="settings_notification_loading_meters">Ladataan mittareita.</string>
+    <string name="settings_notification_sync">Yhdistetäänkö palvelimelle synkronisointia varten?</string>
+    <string name="settings_notification_meters_updated">Mittarit päivitetty.</string>
+    <string name="settings_warning_no_meters">Palvelin ei palauttanut mittareita.</string>
+    <string name="settings_help">Paina takaisin kun olet valmis. Asetukset tallennetaan automaattisesti.</string>
+    
+    <!-- value dialog -->
+    <string name="valuedialog_label_index">Arvon indeksi</string>
+    <string name="valuedialog_label_updated">Päivitetty</string>
+    <string name="valuedialog_text_required">Arvo on pakollinen.</string>
+    <string name="valuedialog_text_not_required">Arvo on vapaaehtoinen.</string>
+    <string name="valuedialog_text_no_limits">-</string>
+    <string name="valuedialog_label_value">Arvo</string>
+    <string name="valuedialog_label_limits">Raja-arvot</string>
+    <string name="valuedialog_notification_no_previous_value">Ensimmäinen arvo.</string>
+    <string name="valuedialog_notification_no_next_value">Viimeinen arvo.</string>
+    <string name="valuedialog_help">Vaihda arvoa pyyhkäisemällä vasemmalle tai oikealle.</string>
+
+</resources>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/input_name"
+        android:text="@string/input_default_hint"
+        android:layout_width="wrap_content"
+        android:minEms="8"
+        android:layout_height="wrap_content"
+        style="@style/text_large">
+    </TextView>
+    
+    <TableLayout
+        android:id="@+id/layout_onfocus_details"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+        android:visibility="gone">
+        <TableRow
+            android:visibility="gone">
+            <TextView
+                android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/form_label_previous_value" />
+	        <TextView
+	            android:id="@+id/input_previous_value"
+	            android:paddingLeft="@dimen/activity_horizontal_margin"
+	            android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"/>
+        </TableRow>
+        <TableRow
+			android:visibility="gone">
+            <TextView
+                android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/form_label_average" />
+	        <TextView 
+	            android:id="@+id/input_average"
+	            android:paddingLeft="@dimen/activity_horizontal_margin"
+	            android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"/>
+        </TableRow>
+        <TableRow
+            android:visibility="gone">
+            <TextView
+                android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/form_label_difference_previous_value" />
+	        <TextView
+	            android:id="@+id/input_difference_previous_value"
+	            android:paddingLeft="@dimen/activity_horizontal_margin"
+	            android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"/>
+        </TableRow>
+        <TableRow
+			android:visibility="gone" >
+            <TextView
+                android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/form_label_median" />
+	        <TextView
+	            android:id="@+id/input_median"
+	            android:paddingLeft="@dimen/activity_horizontal_margin"
+	            android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"/>
+        </TableRow>
+    </TableLayout>
+
+    <EditText
+        android:id="@+id/input_edit_text"
+        android:hint="@string/input_default_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:singleLine="true"
+        style="@style/text_input">
+    </EditText>
+    
+</LinearLayout>
