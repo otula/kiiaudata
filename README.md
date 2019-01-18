@@ -13,6 +13,6 @@ mittausClientv2
 - Updated to newer Android Studio project format
 
 datasets
-- backups of the collected data
+- backups of the collected [data](datasets/database_dump.sql)
 - free-to-use data from the indoor swimming pool of the City of Pori (from 2012 to January 2019)
-- contains electricity, heating and water consumption statistics
+- contains [electricity](datasets/Sahkonkulutus_Paasahkomittari.csv), [heating](datasets/Lammonkulutus_Kaukolampo.csv) and [water](datasets/Vedenkulutus_Paavesimittari.csv) consumption statistics
