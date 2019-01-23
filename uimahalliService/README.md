@@ -19,7 +19,7 @@ Compile-Howto
 
 5) Optionally, check the README file at ca_frontend root directory for other options for the core files.
 
-6) Compile/deploy the application, e.g. ant -f build.xml deploy (the compiled .war and .jar files can be found in the dist directory).
+6) Compile/deploy the application, e.g. run "ant -f build.xml deploy" in the uimahalliService root directory. The compiled .war and .jar files can be found in the dist directory if you want to manually copy them to your server.
 
 Initial-Setup
 -------------
@@ -32,8 +32,8 @@ Initial-Setup
 
 3) Optionally, add the existing dataset (database_dump.sql) from kiiaudata repository (https://github.com/otula/kiiaudata/tree/master/datasets). Note: if you use a pre-existing dataset, the "user_id" value in the table "uh_locations" and "uh_meters" must match a valid user on your setup. You can check the user_ids of your created users from the "users" table (all tables are in ca_frontend database).
 
-Accessing Service
------------------
+Accessing The Service
+---------------------
 
 - The Measurement web page is available at http://yourserveraddress:port/CAFrontEnd/MittariWeb
 - The REST APIs are available at http://yourserveraddress:port/CAFrontEnd/rest/ (e.g. GET http://yourserveraddress:port/CAFrontEnd/rest/uimahalli/MeasurementInterface)
