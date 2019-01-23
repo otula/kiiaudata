@@ -6,10 +6,14 @@ You need:
 - MySQL database (Tested with MariaDB Ver 15.1 Distrib 10.1.37, but any MySQL-compatible database should work)
 - Java Servlet Container Server (Tested with Apache Tomcat 9.0.6, but other versions should work as well)
 
+Additional compile time dependencies (please make sure your tomcat.home variable has been set correctly in your build.properties):
+- servlet-api.jar
+- catalina-ant.jar
+
 Compile-Howto
 -------------
 
-1) Clone this repository and the ca_frontend repository (e.g. https://github.com/otula/apilta/tree/master/ca_frontend).
+1) Clone this repository and the ca_frontend repository (i.e., https://github.com/otula/apilta/tree/master/ca_frontend).
 
 2) Modify the build.properties file (for this service) and the build-core.properties (for ca_frontend) to match your compile setup.
 
@@ -19,7 +23,7 @@ Compile-Howto
 
 5) Optionally, check the README file at ca_frontend root directory for other options for the core files.
 
-6) Compile/deploy the application, e.g. run "ant -f build.xml deploy" in the uimahalliService root directory. The compiled .war and .jar files can be found in the dist directory if you want to manually copy them to your server.
+6) Compile/deploy the application, e.g. run `ant -f build.xml package` in the uimahalliService root directory. The compiled .war and .jar files can be found in the dist directory if you want to manually copy them to your server.
 
 Initial-Setup
 -------------
