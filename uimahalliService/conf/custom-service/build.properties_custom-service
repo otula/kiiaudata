@@ -1,0 +1,14 @@
+#These settings are for custom-service
+
+#the name of the resulting .war & service name
+app.name=custom-service
+
+#used for Ant deployment target
+#manager.url=http://custom-service-tomcat-host:8080/manager/text/
+
+#choose between release and debug compilation
+debugBuild=false
+
+#choose to include ca_frontend basic .html/.js/.jsp/etc files in the resulting service .war package
+#those files are not needed or used by this service, and setting this property to false simply skips the copy step
+includeStaticWebFiles=false

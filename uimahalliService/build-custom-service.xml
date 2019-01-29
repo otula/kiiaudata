@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="ca_frontend-uimahalli-custom-service" basedir=".">
+	
+	<property file="conf/custom-service/build.properties_custom-service"/>
+	
+	<!-- import the uimahalli frontend build.xml file for custom-service -->
+	<import file="build.xml"/>
+	
+	<target name="package-custom-service-configuration" description="Include custom-service files to the package" 
+		extensionOf="ca_frontend-core.ready-to-package" depends="package-uimahalli-files, build">
+		<!-- Copy WEB-INF files-->
+        <!-- Copy .xml and .properties files -->
+    	<copy overwrite="true" todir="${build}/${app.name}/WEB-INF" preservelastmodified="true">
+            <fileset dir="conf/custom-service">
+				<include name="*.xml"/>	<!-- XML files -->
+            	<include name="*.properties"/>	<!-- Property files -->
+            </fileset>
+        </copy>
+		
+		<!-- Copy changes to html/web files -->
+    	<copy overwrite="true" todir="${build}/${app.name}/" preservelastmodified="true">
+            <fileset dir="conf/custom-service/web">
+				<include name="**/**.*"/>	<!-- copies necessary modifications -->
+            </fileset>
+        </copy>
+	</target>
+
+</project>
