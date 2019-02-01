@@ -51,9 +51,14 @@ Accessing The Service
 - The REST APIs are available at http://yourserveraddress:port/CAFrontEnd/rest/ (e.g. GET http://yourserveraddress:port/CAFrontEnd/rest/uimahalli/MeasurementInterface)
 
 ### Example Content for Posting New Data
-```
-{"meters":[{"gauges":[{"id":"00000000-0000-0000-0000-000000000000","gaugeValues":[{"value":"3900000","updated":"2019-01-15T12:00:00+0200"}]}],"id":"3dbdd94e000104e0"}]}
-```
+
+The posted data **must** have its `Content-Type` set to `application/x-www-form-urlencoded`. The parameter name the service expects is named `data`. The interface that receives data is expecting `POST` requests at, for example, `http://localhost:8080/CAFrontEnd/rest/uimahalli/MeasurementInterface`.
+
+The following is an example of POST body content in URLEncoded format: 
+> data=%7B%22meters%22%3A%5B%7B%22gauges%22%3A%5B%7B%22id%22%3A%2200000000-0000-0000-4444-000000000002%22%2C%22gaugeValues%22%3A%5B%7B%22value%22%3A%2222.1%22%2C%22updated%22%3A%222019-01-15T12%3A00%3A00%2B0200%22%7D%5D%7D%5D%2C%22id%22%3A%22f199d94e000104e0%22%7D%5D%7D%0A
+
+And the same in clear text:
+> data={"meters":[{"gauges":[{"id":"00000000-0000-0000-4444-000000000002","gaugeValues":[{"value":"22.1","updated":"2019-01-15T12:00:00+0200"}]}],"id":"f199d94e000104e0"}]}
 
 General Notes
 -------------
